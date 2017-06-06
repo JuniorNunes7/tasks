@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <input type="text" v-model="newTask" placeholder="Digite a tarefa e pressione enter para salvar..." @keyup.enter="store">
+        <input type="text" class="form-control" v-model="newTask" placeholder="Digite a tarefa e pressione enter para salvar..." @keyup.enter="store">
     </div>
 </template>
 

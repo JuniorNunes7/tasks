@@ -33450,6 +33450,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.newTask),
       expression: "newTask"
     }],
+    staticClass: "form-control",
     attrs: {
       "type": "text",
       "placeholder": "Digite a tarefa e pressione enter para salvar..."
