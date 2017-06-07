@@ -17,7 +17,7 @@
     export default {
         props: ['content'],
 
-        data: function() {
+        data() {
             return {
                 tasks: {},
                 newTask: ''
@@ -47,7 +47,7 @@
             destroy(id) {
                 let that = this;
                 axios.delete('/task/' + id).then(function() {
-                    that.tasks = _.filter(that.tasks, function(task) { return task.id != id });
+                    that.tasks = that.tasks.filter(function(task) { return task.id != id });
                 });
             },
 
@@ -78,7 +78,19 @@
     }
 
     div[contenteditable="true"] {
-        border: 1px solid black;
+        display: block;
+        width: 100%;
+        height: 36px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccd0d2;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     }
 
     .legend {
